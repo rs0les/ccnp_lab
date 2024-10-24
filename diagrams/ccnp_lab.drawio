@@ -76,12 +76,6 @@
             <mxPoint x="1559.2880258899677" y="1316" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="1c7a67bf8fd3230f-46" value="" style="shape=mxgraph.cisco.routers.router;html=1;dashed=0;fillColor=#036897;strokeColor=#ffffff;strokeWidth=2;verticalLabelPosition=bottom;verticalAlign=top;rounded=0;shadow=0;comic=0;fontFamily=Verdana;fontSize=12;" parent="1" vertex="1">
-          <mxGeometry x="972" y="320" width="98" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="3qHpSIvOvftQ2MxYyuhb-1" value="" style="shape=mxgraph.cisco.routers.router;html=1;dashed=0;fillColor=#036897;strokeColor=#ffffff;strokeWidth=2;verticalLabelPosition=bottom;verticalAlign=top;rounded=0;shadow=0;comic=0;fontFamily=Verdana;fontSize=12;" parent="1" vertex="1">
-          <mxGeometry x="1136" y="320" width="98" height="60" as="geometry" />
-        </mxCell>
         <mxCell id="3qHpSIvOvftQ2MxYyuhb-3" value="" style="shape=mxgraph.cisco.switches.layer_3_switch;sketch=0;html=1;pointerEvents=1;dashed=0;fillColor=#036897;strokeColor=#ffffff;strokeWidth=2;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;" parent="1" vertex="1">
           <mxGeometry x="620" y="608" width="64" height="64" as="geometry" />
         </mxCell>
@@ -114,6 +108,12 @@
         </mxCell>
         <mxCell id="3qHpSIvOvftQ2MxYyuhb-13" value="" style="shape=mxgraph.cisco.switches.workgroup_switch;sketch=0;html=1;pointerEvents=1;dashed=0;fillColor=#036897;strokeColor=#ffffff;strokeWidth=2;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;" parent="1" vertex="1">
           <mxGeometry x="1583" y="915" width="101" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="VkiDXqV1t_4y2jCt5u3G-2" value="" style="shape=mxgraph.cisco.switches.layer_3_switch;sketch=0;html=1;pointerEvents=1;dashed=0;fillColor=#036897;strokeColor=#ffffff;strokeWidth=2;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="960" y="305" width="90" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="VkiDXqV1t_4y2jCt5u3G-3" value="" style="shape=mxgraph.cisco.switches.layer_3_switch;sketch=0;html=1;pointerEvents=1;dashed=0;fillColor=#036897;strokeColor=#ffffff;strokeWidth=2;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="1152" y="305" width="90" height="90" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
