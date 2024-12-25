@@ -1,0 +1,17 @@
+! General OSPF configuration
+
+! Change reference bandwidth
+auto-cost reference-bandwidth 10000
+
+! Enable OSPF
+router ospf <OSPF_PROCESS_ID>
+
+! Set router ID
+router-id <OSPF_ROUTER_ID>
+
+! Network statements
+network <OSPF_NETWORK> <OSPF_WILDCARD> area <OSPF_AREA>
+
+! Save the configuration
+end
+write memory

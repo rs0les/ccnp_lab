@@ -1,0 +1,31 @@
+! Core functionality
+
+! Enable IPv6 if it isn't already
+ipv6 unicast-routing
+
+! Enable OSPFv3
+router ospfv3 <OSPF_PROCESS_ID>
+
+! Set router ID
+router-id <OSPF_ROUTER_ID>
+
+! Apply to interfaces
+interface <INTERFACE>
+ospv3 <OSPF_PROCESS_ID> ipv6 area <OSPF_AREA>
+! This command also works for applying to interfaces:
+! ipv6 ospf <OSPF_PROCESS_ID> area <OSPF_AREA>
+
+! If you only want to run OSPFv3, you can enable IPv4 support on an interface where it's needed
+interface <INTERFACE>
+ospfv3 <OSPF_PROCESS_ID> ipv4 area <OSPF_AREA>
+! To include a non-IPv6 interface in OSPFv3
+interface <INTERFACE>
+ipv6 enable
+
+! Summarization is slightly different in OSPFv3
+router ospfv3 <OSPF_PROCESS_ID>
+area <OSPF_AREA> range <PREFIX/PREFIX_LENGTH>
+
+! Save the configuration
+end
+write memory

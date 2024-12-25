@@ -1,0 +1,19 @@
+! Specifics for ABRs
+
+! Summarization
+router ospf <OSPF_PROCESS_ID>
+area <OSPF_AREA> range <IP_ADDRESS> <NETMASK>
+end
+
+! Filtering
+! Using a prefix list
+ip prefix-list <PREFIX_LIST_NAME> seq <SEQ> <permit/deny> <X.X.X.X/yy>
+! Safety valve entry
+ip prefix-list <PREFIX_LIST_NAME> seq <SEQ> permit 0.0.0.0/0 le 32 
+! Apply the prefix list to the area
+router ospf <OSPF_PROCESS_ID>
+area <OSPF_AREA> filter-list prefix <PREFIX_LIST_NAME> <in/out>
+end
+
+! Save the configuration
+write memory
