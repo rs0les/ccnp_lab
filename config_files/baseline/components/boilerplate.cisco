@@ -1,0 +1,45 @@
+! All of this comes after setting hostname and configuring a local account
+
+! Turn off domain lookup and set local domain
+no ip domain-lookup
+
+ip domain-name <DOMAIN>
+
+! Enable secret and general password encryption
+
+enable secret algorithm-type scrypt <ENABLE SECRET>
+
+service password-encryption
+
+! motd
+banner motd *
+#####################################################################
+#                            <MOTD>                                 #
+#####################################################################
+*
+
+! Console line
+line con 0
+logging synchronous
+login local
+exec-timeout 5 0
+transport output ssh
+
+! VTY lines
+line vty 0 4
+logging synchronous
+login local
+exec-timeout 5 0
+transport input ssh
+transport output ssh
+
+! Set up SSH
+crypto key generate rsa
+2048
+ip ssh version 2
+ip ssh authentication-retries 3
+ip ssh time-out 60
+
+! Save the configuration
+end
+write memory
