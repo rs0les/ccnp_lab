@@ -1,0 +1,24 @@
+There are too many variables to create an accurate set of configuration documents,
+so there won't be any config files. The basic premise of this lab is:
+
+1. Multi-switch environment
+2. Proper implementation of inter-VLAN routing, RPVST+, and EtherChannel (LACP)
+3. Mixture of Cisco-proprietary (RPVST+) and industry-standard (LACP) protocols
+4. Redundant uplink switches to router
+5. One uplink switch is STP root for half the VLANs, other uplink is STP root for the rest (opposite secondaries)
+6. Port security on access links
+    -Max 2
+    -Current device MAC hardcoded
+    -Shutdown on violation
+7. PortFast and BPDUGuard on access links
+8. Boilerplate configured on all
+
+VLANs in the environment:
+10 - IT
+20 - HR
+30 - Sales
+40 - Customer Service
+50 - Accounting
+80 - Native
+99 - Management
+100 - Blackhole
