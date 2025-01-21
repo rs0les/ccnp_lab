@@ -5,7 +5,7 @@ nodes:
     configuration:
       - name: ios_config.txt
         content: "Building configuration...\n\nCurrent configuration : 3844 bytes\n\
-          !\n! Last configuration change at 23:33:02 MST Mon Jan 20 2025\n!\nversion\
+          !\n! Last configuration change at 23:51:46 MST Mon Jan 20 2025\n!\nversion\
           \ 17.15\nservice timestamps debug datetime msec\nservice timestamps log\
           \ datetime msec\n!\nhostname UPLINK\n!\nboot-start-marker\nboot-end-marker\n\
           !\n!\nno logging console\nno aaa new-model\n!\n!\n!\nclock timezone MST\
@@ -100,8 +100,8 @@ nodes:
   - boot_disk_size: null
     configuration:
       - name: ios_config.txt
-        content: "Building configuration...\n\nCurrent configuration : 4160 bytes\n\
-          !\n! Last configuration change at 23:33:11 MST Mon Jan 20 2025\n!\nversion\
+        content: "Building configuration...\n\nCurrent configuration : 4470 bytes\n\
+          !\n! Last configuration change at 23:51:58 MST Mon Jan 20 2025\n!\nversion\
           \ 17.15\nservice timestamps debug datetime msec\nservice timestamps log\
           \ datetime msec\n!\nhostname SW1\n!\nboot-start-marker\nboot-end-marker\n\
           !\n!\nno logging console\nno aaa new-model\n!\n!\n!\nclock timezone MST\
@@ -151,9 +151,13 @@ nodes:
           \ 1 mode active\n!\ninterface Ethernet0/2\n description EtherChannel trunk\
           \ to SW2\n switchport trunk encapsulation dot1q\n switchport trunk native\
           \ vlan 80\n switchport trunk allowed vlan 10,20,30,40,50,99\n switchport\
-          \ mode trunk\n channel-group 1 mode active\n!\ninterface Ethernet0/3\n!\n\
-          interface Ethernet1/0\n!\ninterface Ethernet1/1\n!\ninterface Ethernet1/2\n\
-          !\ninterface Ethernet1/3\n!\ninterface Vlan99\n description Management\n\
+          \ mode trunk\n channel-group 1 mode active\n!\ninterface Ethernet0/3\n switchport\
+          \ access vlan 100\n switchport mode access\n shutdown\n!\ninterface Ethernet1/0\n\
+          \ switchport access vlan 100\n switchport mode access\n shutdown\n!\ninterface\
+          \ Ethernet1/1\n switchport access vlan 100\n switchport mode access\n shutdown\n\
+          !\ninterface Ethernet1/2\n switchport access vlan 100\n switchport mode\
+          \ access\n shutdown\n!\ninterface Ethernet1/3\n switchport access vlan 100\n\
+          \ switchport mode access\n shutdown\n!\ninterface Vlan99\n description Management\n\
           \ ip address 10.0.99.111 255.255.255.0\n!\nip forward-protocol nd\n!\n!\n\
           ip http server\nip http secure-server\nip ssh bulk-mode 131072\n!\nno logging\
           \ btrace\n!\n!\n!\ncontrol-plane\n!\n!\n!\nline con 0\n exec-timeout 0 0\n\
@@ -220,8 +224,8 @@ nodes:
   - boot_disk_size: null
     configuration:
       - name: ios_config.txt
-        content: "Building configuration...\n\nCurrent configuration : 5403 bytes\n\
-          !\n! Last configuration change at 23:33:26 MST Mon Jan 20 2025\n!\nversion\
+        content: "Building configuration...\n\nCurrent configuration : 5465 bytes\n\
+          !\n! Last configuration change at 23:52:06 MST Mon Jan 20 2025\n!\nversion\
           \ 17.15\nservice timestamps debug datetime msec\nservice timestamps log\
           \ datetime msec\n!\nhostname SW2\n!\nboot-start-marker\nboot-end-marker\n\
           !\n!\nno logging console\nno aaa new-model\n!\n!\n!\nclock timezone MST\
@@ -277,9 +281,10 @@ nodes:
           \ EtherChannel trunk to SW1\n switchport trunk encapsulation dot1q\n switchport\
           \ trunk native vlan 80\n switchport trunk allowed vlan 10,20,30,40,50,99\n\
           \ switchport mode trunk\n channel-group 1 mode active\n!\ninterface Ethernet0/3\n\
-          !\ninterface Ethernet1/0\n description EtherChannel trunk to ROOT1\n switchport\
-          \ trunk encapsulation dot1q\n switchport trunk native vlan 80\n switchport\
-          \ trunk allowed vlan 10,20,30,40,50,99\n switchport mode trunk\n channel-group\
+          \ switchport access vlan 100\n switchport mode access\n shutdown\n!\ninterface\
+          \ Ethernet1/0\n description EtherChannel trunk to ROOT1\n switchport trunk\
+          \ encapsulation dot1q\n switchport trunk native vlan 80\n switchport trunk\
+          \ allowed vlan 10,20,30,40,50,99\n switchport mode trunk\n channel-group\
           \ 2 mode active\n!\ninterface Ethernet1/1\n description EtherChannel trunk\
           \ to ROOT1\n switchport trunk encapsulation dot1q\n switchport trunk native\
           \ vlan 80\n switchport trunk allowed vlan 10,20,30,40,50,99\n switchport\
@@ -357,8 +362,8 @@ nodes:
   - boot_disk_size: null
     configuration:
       - name: ios_config.txt
-        content: "Building configuration...\n\nCurrent configuration : 4247 bytes\n\
-          !\n! Last configuration change at 23:33:32 MST Mon Jan 20 2025\n!\nversion\
+        content: "Building configuration...\n\nCurrent configuration : 4557 bytes\n\
+          !\n! Last configuration change at 23:53:05 MST Mon Jan 20 2025\n!\nversion\
           \ 17.15\nservice timestamps debug datetime msec\nservice timestamps log\
           \ datetime msec\n!\nhostname ROOT2\n!\nboot-start-marker\nboot-end-marker\n\
           !\n!\nno logging console\nno aaa new-model\n!\n!\n!\nclock timezone MST\
@@ -403,11 +408,15 @@ nodes:
           \ switchport mode trunk\n!\ninterface Ethernet0/0\n description Trunk to\
           \ SW5\n switchport trunk encapsulation dot1q\n switchport trunk native vlan\
           \ 80\n switchport trunk allowed vlan 10,20,30,40,50,99\n switchport mode\
-          \ trunk\n!\ninterface Ethernet0/1\n!\ninterface Ethernet0/2\n!\ninterface\
-          \ Ethernet0/3\n!\ninterface Ethernet1/0\n!\ninterface Ethernet1/1\n!\ninterface\
-          \ Ethernet1/2\n description EtherChannel trunk to SW2\n switchport trunk\
-          \ encapsulation dot1q\n switchport trunk native vlan 80\n switchport trunk\
-          \ allowed vlan 10,20,30,40,50,99\n switchport mode trunk\n channel-group\
+          \ trunk\n!\ninterface Ethernet0/1\n switchport access vlan 100\n switchport\
+          \ mode access\n shutdown\n!\ninterface Ethernet0/2\n switchport access vlan\
+          \ 100\n switchport mode access\n shutdown\n!\ninterface Ethernet0/3\n switchport\
+          \ access vlan 100\n switchport mode access\n shutdown\n!\ninterface Ethernet1/0\n\
+          \ switchport access vlan 100\n switchport mode access\n shutdown\n!\ninterface\
+          \ Ethernet1/1\n switchport access vlan 100\n switchport mode access\n shutdown\n\
+          !\ninterface Ethernet1/2\n description EtherChannel trunk to SW2\n switchport\
+          \ trunk encapsulation dot1q\n switchport trunk native vlan 80\n switchport\
+          \ trunk allowed vlan 10,20,30,40,50,99\n switchport mode trunk\n channel-group\
           \ 3 mode active\n!\ninterface Ethernet1/3\n description EtherChannel trunk\
           \ to SW2\n switchport trunk encapsulation dot1q\n switchport trunk native\
           \ vlan 80\n switchport trunk allowed vlan 10,20,30,40,50,99\n switchport\
@@ -479,7 +488,7 @@ nodes:
     configuration:
       - name: ios_config.txt
         content: "Building configuration...\n\nCurrent configuration : 4058 bytes\n\
-          !\n! Last configuration change at 23:33:39 MST Mon Jan 20 2025\n!\nversion\
+          !\n! Last configuration change at 23:52:14 MST Mon Jan 20 2025\n!\nversion\
           \ 17.15\nservice timestamps debug datetime msec\nservice timestamps log\
           \ datetime msec\n!\nhostname SW3\n!\nboot-start-marker\nboot-end-marker\n\
           !\n!\nno logging console\nno aaa new-model\n!\n!\n!\nclock timezone MST\
@@ -576,8 +585,8 @@ nodes:
   - boot_disk_size: null
     configuration:
       - name: ios_config.txt
-        content: "Building configuration...\n\nCurrent configuration : 4247 bytes\n\
-          !\n! Last configuration change at 23:33:19 MST Mon Jan 20 2025\n!\nversion\
+        content: "Building configuration...\n\nCurrent configuration : 4557 bytes\n\
+          !\n! Last configuration change at 23:52:51 MST Mon Jan 20 2025\n!\nversion\
           \ 17.15\nservice timestamps debug datetime msec\nservice timestamps log\
           \ datetime msec\n!\nhostname ROOT1\n!\nboot-start-marker\nboot-end-marker\n\
           !\n!\nno logging console\nno aaa new-model\n!\n!\n!\nclock timezone MST\
@@ -622,20 +631,24 @@ nodes:
           \ switchport mode trunk\n!\ninterface Ethernet0/0\n description Trunk to\
           \ SW3\n switchport trunk encapsulation dot1q\n switchport trunk native vlan\
           \ 80\n switchport trunk allowed vlan 10,20,30,40,50,99\n switchport mode\
-          \ trunk\n!\ninterface Ethernet0/1\n!\ninterface Ethernet0/2\n!\ninterface\
-          \ Ethernet0/3\n!\ninterface Ethernet1/0\n description EtherChannel trunk\
-          \ to SW2\n switchport trunk encapsulation dot1q\n switchport trunk native\
-          \ vlan 80\n switchport trunk allowed vlan 10,20,30,40,50,99\n switchport\
-          \ mode trunk\n channel-group 2 mode active\n!\ninterface Ethernet1/1\n description\
-          \ EtherChannel trunk to SW2\n switchport trunk encapsulation dot1q\n switchport\
-          \ trunk native vlan 80\n switchport trunk allowed vlan 10,20,30,40,50,99\n\
-          \ switchport mode trunk\n channel-group 2 mode active\n!\ninterface Ethernet1/2\n\
-          !\ninterface Ethernet1/3\n!\ninterface Vlan99\n description Management\n\
-          \ ip address 10.0.99.10 255.255.255.0\n!\nip forward-protocol nd\n!\n!\n\
-          ip http server\nip http secure-server\nip ssh bulk-mode 131072\n!\nno logging\
-          \ btrace\n!\n!\n!\ncontrol-plane\n!\n!\n!\nline con 0\n exec-timeout 0 0\n\
-          \ logging synchronous\nline aux 0\nline vty 0 4\n exec-timeout 0 0\n login\n\
-          \ transport input ssh\n!\nntp server 10.0.99.1 prefer\n!\nend"
+          \ trunk\n!\ninterface Ethernet0/1\n switchport access vlan 100\n switchport\
+          \ mode access\n shutdown\n!\ninterface Ethernet0/2\n switchport access vlan\
+          \ 100\n switchport mode access\n shutdown\n!\ninterface Ethernet0/3\n switchport\
+          \ access vlan 100\n switchport mode access\n shutdown\n!\ninterface Ethernet1/0\n\
+          \ description EtherChannel trunk to SW2\n switchport trunk encapsulation\
+          \ dot1q\n switchport trunk native vlan 80\n switchport trunk allowed vlan\
+          \ 10,20,30,40,50,99\n switchport mode trunk\n channel-group 2 mode active\n\
+          !\ninterface Ethernet1/1\n description EtherChannel trunk to SW2\n switchport\
+          \ trunk encapsulation dot1q\n switchport trunk native vlan 80\n switchport\
+          \ trunk allowed vlan 10,20,30,40,50,99\n switchport mode trunk\n channel-group\
+          \ 2 mode active\n!\ninterface Ethernet1/2\n switchport access vlan 100\n\
+          \ switchport mode access\n shutdown\n!\ninterface Ethernet1/3\n switchport\
+          \ access vlan 100\n switchport mode access\n shutdown\n!\ninterface Vlan99\n\
+          \ description Management\n ip address 10.0.99.10 255.255.255.0\n!\nip forward-protocol\
+          \ nd\n!\n!\nip http server\nip http secure-server\nip ssh bulk-mode 131072\n\
+          !\nno logging btrace\n!\n!\n!\ncontrol-plane\n!\n!\n!\nline con 0\n exec-timeout\
+          \ 0 0\n logging synchronous\nline aux 0\nline vty 0 4\n exec-timeout 0 0\n\
+          \ login\n transport input ssh\n!\nntp server 10.0.99.1 prefer\n!\nend"
     cpu_limit: null
     cpus: null
     data_volume: null
@@ -688,7 +701,7 @@ nodes:
     configuration:
       - name: ios_config.txt
         content: "Building configuration...\n\nCurrent configuration : 3951 bytes\n\
-          !\n! Last configuration change at 23:33:50 MST Mon Jan 20 2025\n!\nversion\
+          !\n! Last configuration change at 23:52:22 MST Mon Jan 20 2025\n!\nversion\
           \ 17.15\nservice timestamps debug datetime msec\nservice timestamps log\
           \ datetime msec\n!\nhostname SW4\n!\nboot-start-marker\nboot-end-marker\n\
           !\n!\nno logging console\nno aaa new-model\n!\n!\n!\nclock timezone MST\
@@ -784,8 +797,8 @@ nodes:
   - boot_disk_size: null
     configuration:
       - name: ios_config.txt
-        content: "Building configuration...\n\nCurrent configuration : 4154 bytes\n\
-          !\n! Last configuration change at 23:34:00 MST Mon Jan 20 2025\n!\nversion\
+        content: "Building configuration...\n\nCurrent configuration : 4402 bytes\n\
+          !\n! Last configuration change at 23:52:30 MST Mon Jan 20 2025\n!\nversion\
           \ 17.15\nservice timestamps debug datetime msec\nservice timestamps log\
           \ datetime msec\n!\nhostname SW5\n!\nboot-start-marker\nboot-end-marker\n\
           !\n!\nno logging console\nno aaa new-model\n!\n!\n!\nclock timezone MST\
@@ -836,13 +849,16 @@ nodes:
           \ maximum 2\n switchport port-security mac-address sticky\n switchport port-security\
           \ mac-address sticky 5254.00d8.7d76\n switchport port-security\n spanning-tree\
           \ portfast\n spanning-tree bpduguard enable\n!\ninterface Ethernet1/0\n\
-          !\ninterface Ethernet1/1\n!\ninterface Ethernet1/2\n!\ninterface Ethernet1/3\n\
-          !\ninterface Vlan99\n description Management\n ip address 10.0.99.115 255.255.255.0\n\
-          !\nip forward-protocol nd\n!\n!\nip http server\nip http secure-server\n\
-          ip ssh bulk-mode 131072\n!\nno logging btrace\n!\n!\n!\ncontrol-plane\n\
-          !\n!\n!\nline con 0\n exec-timeout 0 0\n logging synchronous\nline aux 0\n\
-          line vty 0 4\n exec-timeout 0 0\n login\n transport input ssh\n!\nntp server\
-          \ 10.0.99.1 prefer\n!\nend"
+          \ switchport access vlan 100\n switchport mode access\n shutdown\n!\ninterface\
+          \ Ethernet1/1\n switchport access vlan 100\n switchport mode access\n shutdown\n\
+          !\ninterface Ethernet1/2\n switchport access vlan 100\n switchport mode\
+          \ access\n shutdown\n!\ninterface Ethernet1/3\n switchport access vlan 100\n\
+          \ switchport mode access\n shutdown\n!\ninterface Vlan99\n description Management\n\
+          \ ip address 10.0.99.115 255.255.255.0\n!\nip forward-protocol nd\n!\n!\n\
+          ip http server\nip http secure-server\nip ssh bulk-mode 131072\n!\nno logging\
+          \ btrace\n!\n!\n!\ncontrol-plane\n!\n!\n!\nline con 0\n exec-timeout 0 0\n\
+          \ logging synchronous\nline aux 0\nline vty 0 4\n exec-timeout 0 0\n login\n\
+          \ transport input ssh\n!\nntp server 10.0.99.1 prefer\n!\nend"
     cpu_limit: null
     cpus: null
     data_volume: null
@@ -904,8 +920,8 @@ nodes:
   - boot_disk_size: null
     configuration:
       - name: ios_config.txt
-        content: "Building configuration...\n\nCurrent configuration : 4614 bytes\n\
-          !\n! Last configuration change at 23:34:09 MST Mon Jan 20 2025\n!\nversion\
+        content: "Building configuration...\n\nCurrent configuration : 4738 bytes\n\
+          !\n! Last configuration change at 23:52:41 MST Mon Jan 20 2025\n!\nversion\
           \ 17.15\nservice timestamps debug datetime msec\nservice timestamps log\
           \ datetime msec\n!\nhostname SW6\n!\nboot-start-marker\nboot-end-marker\n\
           !\n!\nno logging console\nno aaa new-model\n!\n!\n!\nclock timezone MST\
@@ -963,12 +979,14 @@ nodes:
           \ switchport access vlan 40\n switchport mode access\n switchport port-security\
           \ maximum 2\n switchport port-security mac-address sticky\n spanning-tree\
           \ portfast\n spanning-tree bpduguard enable\n!\ninterface Ethernet1/2\n\
-          !\ninterface Ethernet1/3\n!\ninterface Vlan99\n description Management\n\
-          \ ip address 10.0.99.116 255.255.255.0\n!\nip forward-protocol nd\n!\n!\n\
-          ip http server\nip http secure-server\nip ssh bulk-mode 131072\n!\nno logging\
-          \ btrace\n!\n!\n!\ncontrol-plane\n!\n!\n!\nline con 0\n exec-timeout 0 0\n\
-          \ logging synchronous\nline aux 0\nline vty 0 4\n exec-timeout 0 0\n login\n\
-          \ transport input ssh\n!\nntp server 10.0.99.1 prefer\n!\nend"
+          \ switchport access vlan 100\n switchport mode access\n shutdown\n!\ninterface\
+          \ Ethernet1/3\n switchport access vlan 100\n switchport mode access\n shutdown\n\
+          !\ninterface Vlan99\n description Management\n ip address 10.0.99.116 255.255.255.0\n\
+          !\nip forward-protocol nd\n!\n!\nip http server\nip http secure-server\n\
+          ip ssh bulk-mode 131072\n!\nno logging btrace\n!\n!\n!\ncontrol-plane\n\
+          !\n!\n!\nline con 0\n exec-timeout 0 0\n logging synchronous\nline aux 0\n\
+          line vty 0 4\n exec-timeout 0 0\n login\n transport input ssh\n!\nntp server\
+          \ 10.0.99.1 prefer\n!\nend"
     cpu_limit: null
     cpus: null
     data_volume: null
