@@ -10,7 +10,6 @@ Basics of the lab:
     -Current device MAC hardcoded
     -Shutdown on violation
 7. PortFast and BPDUGuard on access links
-8. Boilerplate configured on all
 
 VLANs in the environment:
 10 - IT
