@@ -22,8 +22,8 @@ VLANs in the environment:
 100 - Blackhole
 
 There isn't much in the way of IP addressing, but we need appropriate sub-interfaces for our
-sort of double router-on-a-stick setup, as well as management SVIs on the switches. For the
-sake of simplicity, everything will be a /24.
+router-on-a-stick setup, as well as management SVIs on the switches. For the sake of simplicity, 
+everything will be a /24.
 
 Sub-interfaces:
 VLAN 10:
