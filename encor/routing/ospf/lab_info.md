@@ -1,6 +1,6 @@
-# Multi-Area OSPF:
+# Multi-Area OSPF
 
-## General Description:
+## General Description
 
 - Four OSPF areas, including the backbone.
   - ASBR at the head of the network, redistributing static address.
