@@ -59,3 +59,8 @@ For the switch management SVIs, we'll keep it simple:
     - 10.0.99.115
 8. SW6
     - 10.0.99.116
+
+ROOT1 will be primary for VLANs 10, 30, 50
+ROOT2 will be primary for VLANs 20, 40, 80, 99
+
+Domain name, as always, is rsoles.lab

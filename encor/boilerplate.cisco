@@ -23,7 +23,6 @@ line con 0
 logging synchronous
 login local
 exec-timeout 5 0
-transport output ssh
 
 ! VTY lines
 line vty 0 4
